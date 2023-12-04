@@ -3,7 +3,7 @@
 ## スケジュール
 
 - 第一回: 環境構築 & Next.js を触ってみる
-- 第二回: ReactDOM API について
+- 第二回: React と ReactDOM について
 - 第三回: microCMS の説明と構築
 
 ## React とは
@@ -23,5 +23,5 @@
 ## 資料
 
 - [環境構築編](./doc/setup.md)
-- [React の書き方と ReactDOM API について](./doc/react-learn.md)
-- [microCMS の構築]()
+- [React と ReactDOM について](./doc/react-learn.md)
+- [microCMS の説明と構築](./doc/microcms-learn.md)
