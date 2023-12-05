@@ -68,37 +68,10 @@ export default function Home({}) {
 ### クラスの指定
 
 - クラス指定では、`class`ではなく、`className`を使います。
-- `index.tsx`にstylesオブジェクトを読み込み、`className`を設定してみましょう。
-
-```ts
-// スタイルオブジェクトの呼び出し
-import styles from './index.module.css'
-```
+- `className`を設定してみましょう。
 
 ```html
-<h1 className="{styles.title}">Welcome! Next.js x microCMS</h1>
-```
-
-### 画像を埋め込む
-
-- `<img>`ではなく`Image`コンポーネントを使います。
-- Imageコンポーネントでは`src`, `width`, `height`, `alt` プロパティの指定が必須です。
-- 元画像のアスペクト比を維持する場合は、`style={{height: 'auto'}}`を指定してください。
-- `index.tsx`にImageコンポーネントを読み込み、`~</main>`の下に以下のようにコードを追加してみましょう。
-
-```ts
-// Imageコンポーネントの呼び出し
-import Image from 'next/image'
-```
-
-```html
-<Image
-  src="/images/spacecat.jpg"
-  width={500}
-  height={500}
-  style={{ height: 'auto' }}
-  alt="space cat"
-/>
+<div className="{styles.fv_gray_wrapper}"></div>
 ```
 
 ### 画像の保存と呼び出し

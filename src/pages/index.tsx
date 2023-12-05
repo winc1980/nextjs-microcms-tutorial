@@ -9,7 +9,7 @@ export default function Home({}) {
       <Header />
       <main>
         <div>
-          <div className={styles.fv_gray_wrapper}>
+          <div className={''}>
             {/* 背景がグレーの部屋を作る */}
             <div className={styles.container}>
               {/* コンテンツ幅を設定。コンテンツ幅について→ https://diytech.website/advantage-of-container/ */}
