@@ -1,5 +1,55 @@
 .header {
-  width: 100%;
-  height: 70px;
-  background: #d3d3d3;
+  height: 80px; /* ヘッダーの高さを指定 */
+}
+
+.header_wrapper {
+  display: flex; /* ロゴの要素とダウンロードボタンを横並びにする */
+  width: 80%; /* 左右に余白を持たせるために、横幅を全体の80%に指定 */
+  margin: 0 auto; /* 上下の余白はゼロ、左右の余白は自動調整（左右均等に調整してくれます。） */
+  justify-content: space-between; /* 要素を両端に配置 */
+}
+
+.logo {
+  /* この辺はfigmaのinspectをまるパクリ */
+  width: 118px;
+  height: 44px;
+  background-color: #c4c4c4;
+  margin-top: 18px;
+}
+
+.logo p {
+  /* ここもfigmaのまるパクリ */
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 41px;
+  margin-top: 1px;
+  text-align: center;
+  color: #333333;
+}
+
+.download_btn {
+  /* ここもfigmaのまるパクリ */
+  width: 160px;
+  height: 52px;
+  background-color: #60caad;
+  margin-top: 14px;
+}
+
+.download_btn :hover {
+  /* ホバーアクション。カーソルを合わせると色が少し薄くなるようにした。 */
+  background-color: #7fcab6;
+}
+
+.download_btn a {
+  display: block; /* aタグはデフォルトでインライン要素になっている。インライン要素のままではmarginやpaddingが効かないのでブロック要素にします。 */
+  font-family: 'Noto Sans JP'; /* これより下は例によりfigmaのまるパクリ */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+  color: #ffffff;
+  padding: 13px 0px; /* ここはボタンの部分にカーソルを合わせると、どのくらいの余白を取るべきか表示される */
 }

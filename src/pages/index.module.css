@@ -1,4 +1,132 @@
-.title {
-  color: #7a7a7a;
-  font-weight: bold;
+@charset "UTF-8";
+
+.container {
+  /* コンテンツ幅を設定。セクション間で要素の横幅が違ってたらデザイン的にあまり美しくないので、統一感を出すために使います。 */
+  max-width: 1200px; /* 最大幅を設定することで、ある程度の横幅までは要素は横に広がるが、1200pxを超えるとそれ以上広がらなくなる。 */
+  margin: 0 auto;
+}
+
+.gray_wrapper {
+  background-color: #f9f9f9;
+}
+
+.fv_gray_wrapper {
+  padding: 169px 0 151px 0; /* fv内の.gray_wrapperに効かせたい指定を記述します。こうすることでgray_wrapper全体にこの指定が効くことを防げます。 */
+}
+
+.fv_h2 {
+  /* fvの中のh2タグにだけ効かせたい指定を記述します。 */
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.big_btn {
+  /* figmaのパクリ */
+  width: 400px;
+  height: 71px;
+  background-color: #60caad;
+  margin: 0 auto;
+}
+
+.big_btn :hover {
+  /* これもホバーするようにします。 */
+  background-color: #7fcab6;
+}
+
+.big_btn a {
+  display: block; /* aタグはデフォルトでインライン要素になっている。インライン要素のままではmarginやpaddingが効かないのでブロック要素にします。 */
+  font-family: 'Noto Sans JP'; /* 以下figmaのパクリ */
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 29px;
+  text-align: center;
+  color: #ffffff;
+  padding: 21px 0px;
+}
+
+.main_contents {
+  padding: 72px 0 80px 0;
+}
+
+.main_contents h2 {
+  margin-bottom: 32px;
+}
+
+.flex_wrapper {
+  display: flex; /* 子要素であるimgタグとpタグを横並びに配置する */
+  justify-content: center;
+}
+
+.flex_wrapper img {
+  width: 480px;
+  margin: 0 16px 0 0;
+}
+
+.flex_wrapper p {
+  width: 480px;
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 170%;
+  color: #333333;
+  margin: 110px 0 0 16px;
+}
+
+.bottom_contents_gray_wrapper {
+  background-color: #f9f9f9;
+  /* 余白を調整 */
+  padding: 72px 0 81px 0;
+}
+
+.bottom_contents p {
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 23px;
+  color: #333333;
+  text-align: center;
+  padding: 32px 0 60px 0;
+}
+
+.bottom_contents h3 {
+  /* クラス名bottom_contents内のh3に効かせたい指定を記述します。 */
+  font-family: 'Noto Sans JP';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #333333;
+  margin-bottom: 12px;
+  padding: 0 8px;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+}
+
+.bottom_contents h3::before {
+  /* バックスラッシュを図形的に描くために擬似要素を使います。擬似要素についてはここでは詳しく説明しませんが、検索するとたくさん出てきます。 */
+  position: absolute;
+  left: 0;
+  top: -4px;
+  content: '';
+  width: 2px;
+  height: 36px;
+  background: #333333;
+  transform: rotate(-24deg);
+}
+
+.bottom_contents h3::after {
+  /* スラッシュを描くための記述です。この辺は少し難しいので、無視してもいいです。 */
+  position: absolute;
+  content: '';
+  right: 0;
+  top: -4px;
+  width: 2px;
+  height: 36px;
+  background: #333333;
+  transform: rotate(24deg);
 }

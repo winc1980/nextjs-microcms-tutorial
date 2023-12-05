@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Title Here</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./practice01.css"
+      media="all"
+    />
+  </head>
+  <body>
+    <!-- ヘッダー　ここから -->
+    <header>
+      <div class="header_wrapper">
+        <!-- LOGOとダウンロードボタンを囲うdiv -->
+        <div class="logo">
+          <!-- LOGOの長方形の範囲と背景色を指定するためのdiv -->
+          <p>LOGO</p>
+        </div>
+        <div class="download_btn">
+          <!-- ダウンロードボタンの指定をするためのdiv -->
+          <a href="">ダウンロード</a
+          ><!-- ダウンロードボタンは押したら何か起きそうなのでaタグにしてみた。 -->
+        </div>
+      </div>
+    </header>
+    <!-- ヘッダー　ここまで -->
+
+    <main>
+      <div id="fv">
+        <!-- セクション毎にid名を指定しておくと、gray_wrapperやcontainerなどの何度も使うクラス名に対して、そこだけに効かせたいcssを書くことができます。ex) #fv .gray_wrapper{padding: 169px 0 151px 0;}  ←id名fv内の.gray_wrapperに対する指定。-->
+        <div class="gray_wrapper">
+          <!-- 背景がグレーの部屋を作る -->
+          <div class="container">
+            <!-- コンテンツ幅を設定。コンテンツ幅について→ https://diytech.website/advantage-of-container/  -->
+            <h1>タイトルテキスト Heading 1</h1>
+            <h2>サブのキャッチコピーキャッチコピーキャッチコピー</h2>
+            <div class="big_btn">
+              <!-- でかいダウンロードボタンにbig_btnをいうクラス名を付与。 -->
+              <a href="">ダウンロード</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_contents">
+        <!-- このセクションにもid名を付与しました。以下のセクションも同様。 -->
+        <div class="container">
+          <!-- containerは使い回すのが一般的です。 -->
+          <h2>タイトルテキスト Heading 2</h2>
+          <div class="flex_wrapper">
+            <!-- 画像と文章を囲うためのdiv -->
+            <img src="images/bg.png" alt="" />
+            <p>
+              2カラムのテキスト。<br />複素数体であれば、任意のCM-タイプのAは、実際、数体である定義体（英語版）(fieldofdefinition)を持つ。自己準同型環の可能なタイプは、対合（ロサチの対合（英語版）(Rosatiinvolution）をもつ環として既に分類される。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="bottom_contents">
+        <div class="gray_wrapper">
+          <!-- さっき作ったグレーの背景の部屋を使う -->
+          <div class="container">
+            <h2>タイトルテキスト Heading 2</h2>
+            <p>
+              ダミーテキスト。ダミーテキスト。ダミーテキスト。ダミーテキスト。
+            </p>
+            <h3>今すぐダウンロード！</h3>
+            <div class="big_btn">
+              <a href="">ダウンロード</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- フッター　ここから -->
+    <footer>
+      <p>©sample.com</p>
+    </footer>
+    <!-- フッター　ここまで -->
+    <script type="text/javascript" src="assets/base.js"></script>
+  </body>
+</html>
