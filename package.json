@@ -5,8 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "http-server": "http-server .next -o ./server/app/",
+    "start": "next build && next start",
+    "http-server": "http-server .next -o ./server/pages/",
     "lint": "next lint"
   },
   "engines": {
