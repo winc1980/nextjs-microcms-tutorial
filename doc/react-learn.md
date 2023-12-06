@@ -93,7 +93,7 @@ import Link from 'next/link'
 ```
 
 ```html
-<Link href="/about">About page</Link>
+<Link href="/about">ダウンロード</Link>
 ```
 
 - 遷移してもページがリロードされていないことに気づきましたか？
