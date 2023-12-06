@@ -132,3 +132,24 @@ import Header from '@/components/Header'
   - コンポーザブルとして管理します。
 - `src/composables`内をみてみましょう。
 - `microcms.ts`があります。このファイルは記事を取得するロジックが組まれているのでコンポーザブルで管理します。
+
+## CSSモジュールの書き方
+
+- ReactではCSS Moduleを使うことができます
+- メリット
+  - 独立したCSS
+  - クラス名自動生成により名前の重複がない
+- 書き方
+
+```css
+.header {
+  /* プロパティ */
+}
+```
+
+- 書けない書き方
+
+```css
+header {
+}
+```
