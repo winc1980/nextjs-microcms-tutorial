@@ -2,19 +2,11 @@ import Link from 'next/link'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import styles from './index.module.css'
-import { client } from '@/composables/microcms'
-import type { MicroCMSImage, MicroCMSDate } from 'microcms-js-sdk'
 
 // ダッシュボードから取得されるオブジェクトの型を定義
-type SettingsData = {
-  title: string
-  subtitle: string
-  image: MicroCMSImage
-} & MicroCMSDate
 
 /* index.tsxはホームページとして表示されます。 */
-export default function Home({ settingsData }: { settingsData: SettingsData }) {
-  console.log(settingsData)
+export default function Home({}) {
   return (
     <>
       <Header />
@@ -24,8 +16,8 @@ export default function Home({ settingsData }: { settingsData: SettingsData }) {
             {/* 背景がグレーの部屋を作る */}
             <div className={styles.container}>
               {/* コンテンツ幅を設定。コンテンツ幅について→ https://diytech.website/advantage-of-container/ */}
-              <h1>{settingsData.title}</h1>
-              <h2 className={styles.fv_h2}>{settingsData.subtitle}</h2>
+              <h1>{'title'}</h1>
+              <h2 className={styles.fv_h2}>{'subtitle'}</h2>
               <div className={styles.big_btn} style={{ marginTop: '30px' }}>
                 {/* でかいダウンロードボタンにbig_btnをいうクラス名を付与。 */}
                 <Link href="/about">ダウンロード</Link>
@@ -41,7 +33,7 @@ export default function Home({ settingsData }: { settingsData: SettingsData }) {
             <h2>タイトルテキスト Heading 2</h2>
             <div className={styles.flex_wrapper}>
               {/* 画像と文章を囲うためのdiv */}
-              <img src={settingsData.image.url} alt="" />
+              <img src={'url'} alt="" />
               <p>
                 2カラムのテキスト。
                 <br />
@@ -76,12 +68,7 @@ export default function Home({ settingsData }: { settingsData: SettingsData }) {
 // ! ビルド時にmicroCMSから情報をすべて取得しHTMLを生成しておく
 // ! ビルド後はmicroCMSにアクセスできない
 export const getStaticProps = async () => {
-  const settingsData = await client.get<SettingsData>({
-    endpoint: 'settings',
-  })
   return {
-    props: {
-      settingsData: settingsData,
-    },
+    props: {},
   }
 }
